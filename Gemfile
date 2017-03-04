@@ -54,3 +54,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #include bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha6'
+
+#include will_paginate
+gem 'will_paginate'
+
+#include simpleform
+gem 'simple_form'
