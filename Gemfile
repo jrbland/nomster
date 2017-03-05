@@ -63,3 +63,6 @@ gem 'simple_form'
 
 #include font awesome"
 gem 'font-awesome-rails'
+
+#include devise
+gem 'devise'
