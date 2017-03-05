@@ -60,3 +60,6 @@ gem 'will_paginate'
 
 #include simpleform
 gem 'simple_form'
+
+#include font awesome"
+gem 'font-awesome-rails'
