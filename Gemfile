@@ -66,3 +66,9 @@ gem 'font-awesome-rails'
 
 #include devise
 gem 'devise'
+
+#iclude Geocoder
+gem "geocoder"
+
+#include figaro
+gem 'figaro'
