@@ -5,14 +5,14 @@ class PlacesController < ApplicationController
     #@places = Place.paginate(:page => params[:page], :per_page  => 3).order('name DESC')
     @places = Place.paginate(page: params[:page], per_page: 3)
   end
-  
+
   def new
     @place = Place.new
   end
 
   def create
     @place = current_user.places.create(place_params)
-    if @place.valid?  
+    if @place.valid?
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
@@ -21,6 +21,7 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit
