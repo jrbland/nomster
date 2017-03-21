@@ -6,8 +6,9 @@
 
   </head>
   <body>
-  <div id="map"></div>
+
   <% if @place.latitude.present? && @place.longitude.present? %>
+    <div id="map"></div>
     <script>
 
       function initMap() {
@@ -35,7 +36,6 @@
 
   <% end %>
 
-  <br />
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
@@ -49,6 +49,18 @@
     <%= f.input :message %>
     <%= f.input :rating %>
     <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+  <% end %>
+
+  <h1>Comments</h1>
+
+  <% @place.comments.each do |comment| %>
+    <div>
+      <blockquote>
+        <b><%= comment.rating %></b> -
+          <%= comment.message %>
+        <small><%= comment.user.email %></small>
+      </blockquote>
+    </div>
   <% end %>
 
 </div>
