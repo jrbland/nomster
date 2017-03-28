@@ -67,8 +67,12 @@ gem 'font-awesome-rails'
 #include devise
 gem 'devise'
 
-#iclude Geocoder
+#include Geocoder
 gem "geocoder"
 
 #include figaro
 gem 'figaro'
+
+#include carrierwave
+gem 'carrierwave', '~> 1.0'
+gem 'fog'
